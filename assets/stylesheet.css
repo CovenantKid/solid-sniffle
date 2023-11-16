@@ -1,0 +1,42 @@
+/* Background elements to be colored #2e2c2c */
+/* text color/elements should be whitesmoke or #f5f5f5 */
+/* borders are lightgrey or #d3d3d3*/
+* {
+background-color: #2e2c2c;
+font-family: 'Martian Mono', monospace;
+font-family: 'Roboto Mono', monospace;
+}
+.input{
+    justify-content: space-evenly;
+}
+
+#cityentry{
+    border-color: #d3d3d3;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    font-size: 16px;
+    margin-top: 2%;
+    padding: 0.3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+#submit{
+border-color: #d3d3d3;
+border-style: solid;
+border-radius: 15px;
+color: whitesmoke;
+text-align: center;
+display: flex;
+font-size: 16px;
+margin-top: 1%;
+margin-left: 4.3%;
+padding: 0.3%;
+padding-left: 5%;
+padding-right: 5%;
+}
