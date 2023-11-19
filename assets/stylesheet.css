@@ -3,40 +3,43 @@
 /* borders are lightgrey or #d3d3d3*/
 * {
 background-color: #2e2c2c;
+color: whitesmoke;
+font-size: 16px;
 font-family: 'Martian Mono', monospace;
 font-family: 'Roboto Mono', monospace;
 }
 .input{
-    justify-content: space-evenly;
+float: left;
+align-items: center;
+justify-content: center;
+}
+
+#banner{
+justify-self: center;
 }
 
 #cityentry{
-    border-color: #d3d3d3;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 15px;
-    color: whitesmoke;
-    text-align: center;
-    display: flex;
-    font-size: 16px;
-    margin-top: 2%;
-    padding: 0.3%;
-    padding-left: 5%;
-    padding-right: 5%;
+max-width: 100%;
+border-width: 2px;
 }
 
 
 #submit{
+display: flex;
 border-color: #d3d3d3;
 border-style: solid;
 border-radius: 15px;
+justify-self: center;
 color: whitesmoke;
 text-align: center;
-display: flex;
 font-size: 16px;
 margin-top: 1%;
-margin-left: 4.3%;
-padding: 0.3%;
-padding-left: 5%;
-padding-right: 5%;
+padding: 5%;
+margin: 0 auto;
+}
+
+@media screen and (max-width: 700px){
+    #banner{
+        font-size: 12px;
+    }
 }
