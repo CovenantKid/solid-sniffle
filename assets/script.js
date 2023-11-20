@@ -1,7 +1,19 @@
 // global variables
-const city = "jim thorpe"
 let lat = ""
 let lon = ""
+const city = "new york"
+
+
+// code ran when page has loaded.
+function onload(){
+    const submitbtn = document.getElementById("submit")
+    submitbtn.addEventListener("click",GetCordinates)
+    
+}
+
+
+
+
 // grab the cordinates of the city based on the entered name.
 async function GetCordinates(){
     const cordsCall = await fetch ("http://api.openweathermap.org/geo/1.0/direct?q=" + (city) + "&limit=1&appid=513b2f121ba24b289f75ea98532934e4")
@@ -10,8 +22,6 @@ async function GetCordinates(){
     lon = cords[0].lon
     GetWeather()
 }
-
-GetCordinates()
 
 // Grab the weather of the city based on the cordinates from GetCordinates()
  async function GetWeather(){
