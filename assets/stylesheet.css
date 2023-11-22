@@ -2,6 +2,7 @@
 /* text color/elements should be whitesmoke or #f5f5f5 */
 /* borders are lightgrey or #d3d3d3*/
 * {
+box-sizing: border-box;
 background-color: #2e2c2c;
 color: whitesmoke;
 font-size: 16px;
@@ -14,7 +15,7 @@ align-items: center;
 justify-content: center;
 }
 
-#banner{
+#infobanner{
 justify-self: center;
 text-align: center;
 }
@@ -23,8 +24,6 @@ text-align: center;
 max-width: 100%;
 border-width: 2px;
 }
-
-
 #submit{
 display: flex;
 border-color: #d3d3d3;
@@ -38,7 +37,24 @@ margin-top: 1%;
 padding: 5%;
 margin: 0 auto;
 }
+.boxcontainer{
+display: flex;
+justify-content: center;
+clear: left;
+}
 
+#box1,#box2,#box3,#box4,#box5 {
+    display: flex;
+    float: right;
+    width: 13%;
+    height: 250px;
+    margin: 0.5%;
+    border-style: solid;
+    clear: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 @media screen and (max-width: 700px){
     #banner{
         font-size: 12px;
