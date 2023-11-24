@@ -43,10 +43,10 @@ justify-content: center;
 clear: left;
 }
 
-#box1,#box2,#box3,#box4,#box5 {
+#box1,#box2,#box3,#box4,#box5{
     display: flex;
     float: right;
-    width: 13%;
+    width: 25%;
     height: 250px;
     margin: 0.5%;
     border-style: solid;
@@ -54,6 +54,7 @@ clear: left;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    text-wrap: wrap;
   }
 @media screen and (max-width: 700px){
     #banner{

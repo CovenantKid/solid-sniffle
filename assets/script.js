@@ -4,6 +4,7 @@ let lon = ""
 
 
 
+
 // code ran when page has loaded.
 function onload(){
     const submitbtn = document.getElementById("submit");
@@ -23,13 +24,17 @@ async function GetCordinates(){
     GetWeather();
 }
 
-// Grab the weather of the city based on the cordinates from GetCordinates(), and sends them to the proper div card OR the current day.
+// Grab the weather of the city based on the cordinates from GetCordinates()
  async function GetWeather(){
- const ForecastCall = await fetch ("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=513b2f121ba24b289f75ea98532934e4");
- let Forecast = ForecastCall.json();
- const firstday = document.getElementById("box1")
- console.log(firstday)
-
- console.log(Forecast);
+ const ForecastCall = await fetch ("https://api.openweathermap.org/data/2.5/forecast/daily?lat=" + lat + "&lon=" + lon + "&appid=513b2f121ba24b289f75ea98532934e4");
+ let Forecast = await ForecastCall.json();
+ console.log(Forecast)
+ for (let i = 1; i < 6; i++) {
+    let activecard = document.getElementById("box" + String(i))
+    activecard.innerText = (Forecast.list[i].dt_txt)
+    console.log(Forecast.city.name)
+  }
  }
+
+ 
 
