@@ -1,3 +1,4 @@
+
 // global variables
 let lat = "none"
 let lon = "none"
@@ -61,6 +62,8 @@ async function GetCordinates(){
 }
 // resets datelist to zero after for loop has finished
 datelist = 0
+// calls to load previous searches
+loadprevious()
 }
 
 // decides the icon to use for weather.
@@ -88,12 +91,9 @@ function decideweathericon(clouds){
 }
 
 function loadprevious(){
-const newbutton = document.createElement("button")
-newbutton.setAttribute("class","previous")
-newbutton.setAttribute("innerhtml","help")
-newbutton.addEventListener("click", )
-const previousSearch = document.getElementById("previous")
-previousSearch.appendChild(newbutton)
-newbutton.setAttribute("class","previous")
-
+let newbutton = document.createElement("button");
+const location = document.getElementById("previous")
+newbutton.innerHTML = localStorage.getItem("SearchedCity")
+console.log(location)
+location.appendChild(newbutton)
 }
