@@ -33,9 +33,8 @@ async function GetCordinates(){
 
 // Grab the weather of the city based on the cordinates from GetCordinates()
  async function GetWeather5day(){
- const ForecastCall = await fetch ("https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=513b2f121ba24b289f75ea98532934e4&units=imperial");
+ const ForecastCall = await fetch ("http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&cnt=40&appid=513b2f121ba24b289f75ea98532934e4&units=imperial");
  let Forecast = await ForecastCall.json();
- console.log(Forecast)
  const firstdaybox = document.getElementById("currentdaybanner");
  const date = String(Forecast.list[0].dt_txt);
  const clouds = String(Forecast.list[0].weather[0].main);
@@ -84,7 +83,6 @@ function decideweathericon(clouds){
         return cloudicon;
         default:
         cloudicon = "???"
-        console.log(cloudicon)
         return cloudicon
 
     }
@@ -94,6 +92,5 @@ function loadprevious(){
 let newbutton = document.createElement("button");
 const location = document.getElementById("previous")
 newbutton.innerHTML = localStorage.getItem("SearchedCity")
-console.log(location)
 location.appendChild(newbutton)
 }
