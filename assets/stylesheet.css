@@ -40,7 +40,7 @@ margin: 0 auto;
 .boxcontainer{
 display: flex;
 justify-content: center;
-clear: left;
+clear: both;
 }
 
 #box1,#box2,#box3,#box4,#box5{
@@ -48,19 +48,47 @@ clear: left;
     float: right;
     width: 25%;
     height: 250px;
-    margin: 0.5%;
     border-style: solid;
-    clear: left;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     text-wrap: wrap;
   }
+  .currentday{
+    display: flex;
+    border-style: solid;
+    height: 300px;
+    width: 85%;
+    justify-content: center;
+    text-wrap: wrap;
+    float: right;
+    clear: left;
+  }
+  #currentdaybanner{
+    font-size: 32px;
+  }
+  #previous{
+    clear: left;
+    display: flex;
+    float: left;
+    width: 15%;
+    height: 300px;
+    border-style: solid;
+  }
 @media screen and (max-width: 700px){
-    #banner{
-        font-size: 12px;
+    * {
+        font-size: 14px;
     }
     .input{
      max-width: 150px;   
+    }
+    #currentdaybanner{
+    font-size: 24px;
+    }
+    .currentday{
+    height: 200px;
+    }
+    #previous{
+    height: 200px;
     }
 }
